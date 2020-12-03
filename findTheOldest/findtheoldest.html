@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪</title>
+</head>
+<body>
+  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  <script> 
+  let findTheOldest = function(arrObj) {
+  
+  let result = arrObj.sort(function(a,b){return (b.yearOfDeath-b.yearOfBirth)-(a.yearOfDeath-a.yearOfBirth);});
+  return result[0].name;
+  /**arrObj.reduce(function(oldest,person){
+    let age = person.yearOfDeath-person.yearOfBirth;
+    if(!oldest[age])
+    {
+      oldest[age]=person.name;
+    }
+    else
+    {
+      oldest[age].push=person.name;
+    }
+
+  }
+  ,{});**/
+
+  //oldest.sort()
+}
+const people = [
+      {
+        name: 'Carly',
+        yearOfBirth: 1942,
+        yearOfDeath: 1970,
+      },
+      {
+        name: 'Ray',
+        yearOfBirth: 1962,
+        yearOfDeath: 2011
+      },
+      {
+        name: 'Jane',
+        yearOfBirth: 1912,
+        yearOfDeath: 1941
+      },
+];
+
+findTheOldest(people);
+
+  </script>
+</body>
+</html>
